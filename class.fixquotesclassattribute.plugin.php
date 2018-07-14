@@ -62,9 +62,8 @@ class FixQuotesClassAttributePlugin extends Gdn_Plugin {
         $posts = Gdn::sql()
             ->select("{$postType}ID, {$textColumn}")
             ->from($postType)
-            ->where("{$postType}ID >=", $lastID)
+            ->where("{$postType}ID >", $lastID)
             ->where('Format', 'Html')
-            ->limit(10000)
             ->get()
             ->resultArray();
         if (count($posts) == 0) {
@@ -84,7 +83,7 @@ class FixQuotesClassAttributePlugin extends Gdn_Plugin {
                         ->put();
                 }
                 // Don't update if this is a single post for testing.
-                if ($id = 0) {
+                if ($id == 0) {
                     saveToConfig(
                         "FixQuotesClassAttribute.Last{$postType}ID",
                         $post["{$postType}ID"]
