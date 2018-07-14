@@ -1,0 +1,21 @@
+{
+    "name": "Fix Quotes Class Attribute",
+    "description": "Under certain circumstances HTML quotes do not have the needed class. This plugin allows admins to fix this problem.",
+    "version": "0.0.1",
+    "license": "MIT",
+    "type": "addon",
+    "key": "fixquotesclassattribute",
+    "mobileFriendly": true,
+    "hasLocale": true,
+    "settingsUrl": "/settings/fixquotesclassattribute",
+    "pluginUrl": "https://github.com/r-j/fixquotesclassattribute",
+    "authors": [
+        {
+            "name": "Robin Jurinka",
+            "homepage": "https://open.vanillaforums.com/profile/r_j"
+        }
+    ],
+    "require": {
+        "vanilla": ">=2.5"
+    }
+}
